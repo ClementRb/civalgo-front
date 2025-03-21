@@ -34,3 +34,4 @@ npm run dev
 
 - **Errors**: Handle errors with the UI.
 - **SSR**: Full impementation of SSR with Next.js.
+- **Routing**: Implement route guard
