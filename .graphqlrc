@@ -1,0 +1,3 @@
+{
+  "schema": "./graphql/generated/introspection.json"
+}

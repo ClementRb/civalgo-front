@@ -1,0 +1,8 @@
+mutation checkOut($checkOutEventMutation: CheckEventInput!) {
+  checkOut(checkEventInput: $checkOutEventMutation) {
+    id
+    siteId
+    timestamp
+    type
+  }
+}

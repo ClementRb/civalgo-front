@@ -1,0 +1,16 @@
+query listCheckInUsers {
+  listCheckInUsers {
+    email
+    id
+    name
+    role
+    events {
+      timestamp
+      type
+      site {
+        name
+        location
+      }
+    }
+  }
+}

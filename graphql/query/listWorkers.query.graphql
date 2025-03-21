@@ -1,0 +1,8 @@
+query listWorkers {
+  workers {
+    id
+    name
+    email
+    role
+  }
+}

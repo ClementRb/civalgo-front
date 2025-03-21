@@ -1,0 +1,12 @@
+query eventsByWorkerId($workerId: String!) {
+  eventsByWorkerId(workerId: $workerId) {
+    id
+    site {
+      name
+      id
+      location
+    }
+    timestamp
+    type
+  }
+}

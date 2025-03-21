@@ -1,0 +1,8 @@
+mutation checkIn($checkInEventMutation: CheckEventInput!) {
+  checkIn(checkEventInput: $checkInEventMutation) {
+    id
+    siteId
+    timestamp
+    type
+  }
+}

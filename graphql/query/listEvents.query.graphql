@@ -1,0 +1,18 @@
+query listEvents($filterEventsInput: FilterEventsInput!) {
+  listEvents(filters: $filterEventsInput) {
+    id
+    site {
+      name
+      id
+      location
+    }
+    timestamp
+    worker {
+      id
+      name
+      role
+      email
+    }
+    type
+  }
+}
