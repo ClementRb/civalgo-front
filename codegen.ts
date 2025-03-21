@@ -1,7 +1,7 @@
 import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
-  schema: 'http://localhost:3003/graphql',
+  schema: process.env.NEXT_PUBLIC_API_URL,
   documents: ['**/*.graphql'],
   generates: {
     './graphql/generated/introspection.json': {

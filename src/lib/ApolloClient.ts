@@ -8,7 +8,7 @@ import {
 import { getSession } from 'next-auth/react';
 
 const httpLink = new HttpLink({
-  uri: 'http://localhost:3003/graphql',
+  uri: process.env.NEXT_PUBLIC_API_URL,
 });
 
 const authLink = new ApolloLink(async (operation, forward) => {

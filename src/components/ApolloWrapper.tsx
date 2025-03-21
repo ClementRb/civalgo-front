@@ -23,7 +23,7 @@ function makeClient() {
   });
 
   const httpLink = new HttpLink({
-    uri: 'http://localhost:3003/graphql',
+    uri: process.env.NEXT_PUBLIC_API_URL,
     fetchOptions: { cache: 'force-cache' },
   });
 

@@ -1,36 +1,36 @@
+# This is a simple interface for a worker check in system with real time visibility
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm i
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[NextAuth.js](https://next-auth.js.org/) is used for the authentification
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[@apollo/experimental-nextjs-app-support](https://www.npmjs.com/package/@apollo/experimental-nextjs-app-support) for Next.js app-routing.
 
-## Learn More
+[Apollo Client](https://www.apollographql.com/) to interact with GraphQl API
 
-To learn more about Next.js, take a look at the following resources:
+[Material UI](https://mui.com/material-ui/) for the UI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Future that i left out
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Errors**: I have not implemented a way to handle errors because of the time allocated to the project
 
-## Deploy on Vercel
+### Future that could be added
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Errors**: Handle errors with the UI.
+- **SSR**: Full impementation of SSR with Next.js.

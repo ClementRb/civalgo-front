@@ -11,7 +11,7 @@ export const authOptions = {
       },
       async authorize(credentials) {
         try {
-          const res = await fetch('http://localhost:3003/graphql', {
+          const res = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

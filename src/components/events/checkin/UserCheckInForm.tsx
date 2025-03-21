@@ -24,7 +24,7 @@ export default function UserCheckInForm() {
 
   const [mutate, { error }] = useCheckInMutation();
 
-  if (error) console.log(error);
+  if (error) console.log('error', error.cause);
 
   return (
     <Card sx={{ display: 'flex' }}>
