@@ -5,9 +5,9 @@ import { Roboto } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
 import { Container } from '@mui/material';
-import { ApolloWrapper } from './apollo-wrapper';
 import { SessionProvider } from '../context/SessionProvider';
-import { Header } from '@/components/layout/header/header';
+import { ApolloClientProvider } from '@/components/ApolloWrapper';
+import { Header } from '@/components/layout/header/Header';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -31,14 +31,14 @@ export default function RootLayout({
       <body className={roboto.variable}>
         <AppRouterCacheProvider>
           <SessionProvider>
-            <ApolloWrapper>
+            <ApolloClientProvider>
               <ThemeProvider theme={theme}>
                 <Header />
                 <Container maxWidth="sm" className="mt-6">
                   {children}
                 </Container>
               </ThemeProvider>
-            </ApolloWrapper>
+            </ApolloClientProvider>
           </SessionProvider>
         </AppRouterCacheProvider>
       </body>

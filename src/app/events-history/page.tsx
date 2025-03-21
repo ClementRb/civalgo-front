@@ -22,7 +22,7 @@ import {
   useListSitesQuery,
   useListWorkersQuery,
 } from '../../../graphql/generated/operation';
-import { useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
@@ -45,9 +45,9 @@ export default function EventHistoryPage() {
     setWorker(event.target.value);
   };
 
-  useMemo(() => {
+  useEffect(() => {
     refetchEvents();
-  }, [site, worker]);
+  }, [refetchEvents, site, worker]);
 
   return (
     <div className="flex flex-1 flex-col gap-4">
